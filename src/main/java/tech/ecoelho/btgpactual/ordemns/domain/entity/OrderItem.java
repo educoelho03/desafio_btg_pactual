@@ -3,18 +3,20 @@ package tech.ecoelho.btgpactual.ordemns.domain.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.math.BigDecimal;
 
-@Document(collection = "tb_orders")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderItens {
+public class OrderItem {
 
     private String product;
     private Integer quantity;
+
+    @Field(targetType = FieldType.DECIMAL128)
     private BigDecimal price;
 
 }

@@ -6,9 +6,11 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=123
-
   rabbitmq:
-    image: rabbitmq:3.13-management
+    image: rabbitmq:3.13.7-management  # Esta imagem já inclui o plugin de gerenciamento
     ports:
-      - 15672:15672
-      - 5672:5672
+      - 15672:15672  # Porta para o console de gerenciamento (Web UI)
+      - 5672:5672   # Porta para conexões AMQP
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest

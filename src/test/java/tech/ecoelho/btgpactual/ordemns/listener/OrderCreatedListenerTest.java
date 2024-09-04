@@ -7,12 +7,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.messaging.support.MessageBuilder;
-import tech.ecoelho.btgpactual.ordemns.dto.OrderCreatedEvent;
-import tech.ecoelho.btgpactual.ordemns.dto.OrderResponse;
 import tech.ecoelho.btgpactual.ordemns.factory.OrderCreatedEventFactory;
 import tech.ecoelho.btgpactual.ordemns.service.OrderService;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;

@@ -4,7 +4,6 @@ import tech.ecoelho.btgpactual.ordemns.dto.OrderCreatedEvent;
 import tech.ecoelho.btgpactual.ordemns.dto.OrderItensEvent;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 public class OrderCreatedEventFactory {

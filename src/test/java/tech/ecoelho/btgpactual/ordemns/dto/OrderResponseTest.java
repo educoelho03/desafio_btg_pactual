@@ -2,7 +2,6 @@ package tech.ecoelho.btgpactual.ordemns.dto;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Or;
 import tech.ecoelho.btgpactual.ordemns.factory.OrderEntityFactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

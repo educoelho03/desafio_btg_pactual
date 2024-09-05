@@ -24,23 +24,20 @@ class OrderCreatedListenerTest {
     OrderCreatedListener orderCreatedListener;
 
     @Nested
-    class listen {
-
+    class Listen {
 
         @Test
-        void shouldCallServiceWithCorrectParameters(){
+        void shouldCallServiceWithCorrectParameters() {
+
             // ARRANGE
-            var event = OrderCreatedEventFactory.build();
+            var event = OrderCreatedEventFactory.buildWithOneItem();
             var message = MessageBuilder.withPayload(event).build();
 
             // ACT
             orderCreatedListener.listen(message);
 
             // ASSERT
-            verify(orderService, times(1)).save(eq(message.getPayload() ));
+            verify(orderService, times(1)).save(eq(message.getPayload()));
         }
-
-
     }
-
 }
